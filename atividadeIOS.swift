@@ -1,6 +1,5 @@
-// 1 – Utilizando a estrutura while, faça um algoritmo que receberá uma quantidade
-// indefinida de números e realizará a soma de todos eles, seu algoritmo deverá
-// encerrar quando a soma dos números recebidos por ele for maior que 100.
+
+// 1 
 
 var soma = 0
 while soma <= 100 {
@@ -10,10 +9,7 @@ while soma <= 100 {
     print(soma)
 }
 
-// 2 - Implemente um algoritmo utilizando a estrutura while, que irá receber uma
-// quantidade indefinida de palavras, em que cada palavra irá representar uma
-// tentativa de “senha de acesso”.
-
+// 2 
 var entradas = [ "entrada1", "entrada2", "novasenha", "sair"]
 var entradaInformada = ""
 
@@ -28,9 +24,7 @@ while entradaInformada != "novasenha" && entradaInformada != "sair" {
   print(entradaInformada)
 }
 
-// 3 - Faça um algoritmo que leia as três notas de 10 alunos de uma turma. Para
-// cada aluno, calcule a média ponderada, como segue:
-// MP = ( n1*2 + n2*4 + n3*3 ) / 10
+// 3 
 
 var alunoNotas: [Int: ( nota1: Int, nota2: Int, nota3: Int, )] = [:]
 
@@ -50,9 +44,7 @@ for index in 0..<10 {
   print("Media ponderada do aluno \(index): \(media)")
 }
 
-// 4 - Escreva um algoritmo que leia 50 valores e encontre o maior e o menor deles.
-// Mostre o resultado.
-
+// 4
 var maior = Int.min
 var menor = Int.max
 
@@ -69,9 +61,7 @@ for _ in 0..<50 {
 print("O maior numero e: \(maior)")
 print("O menor numero e: \(menor)")
 
-// 5. Escrever um algoritmo que leia 4 valores para uma variável n e, para cada um
-// deles, calcule a tabuada de 1 até n. Mostre a tabuada na forma:
-
+// 5
 for _ in 0..<4 {
   let n = Int.random(in: 1...100)
   print("\nTabuada do \(n)")
@@ -80,9 +70,7 @@ for _ in 0..<4 {
   }
 }
 
-// 6. Escrever um algoritmo que calcula e escreve a soma dos números primos entre
-// 92 e 1478.
-
+// 6
 func isPrimo (numero: Int) -> Bool {
   for index in 2..<numero {
     if numero % index == 0 {
@@ -96,4 +84,18 @@ print(isPrimo(numero: 13))
 var somaPrimos2 = 0
 for numero in 92...1478 {
   if isPrimo(numero: numero) {
-... (18 linhas restantes)
+    somaPrimos2 += numero
+  }
+}
+print(somaPrimos2)
+
+// exercicio 7 
+
+for _ in 0..<10 {
+  entradaNumeros.append(Int.random(in: 0...100))
+}
+entradaNumeros.sort()
+print(entradaNumeros)
+
+let filter = entradaNumeros.sorted(by: >)
+print(filter)
